@@ -11,7 +11,11 @@ public class Driver {
     //everyone should call static getter method instead
     private Driver() {
     }
-    public static WebDriver getDriver() {
+    /*
+    Syncoronization makes method thred safe. It assure that only 1 thread sue at a time (example: left hand take bottle and it makes sure that righ hand takes after left dropgit )
+    Thread safe:
+     */
+    public synchronized static WebDriver getDriver() {
         //if webdriver object doesn't exist
         //create it
         if (driverPool.get() == null) {

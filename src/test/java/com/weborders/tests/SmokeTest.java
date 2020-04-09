@@ -20,8 +20,8 @@ public class SmokeTest extends AbstractBaseTest {
 
         extentTest.pass(component + " verified!");
     }
-
-    @DataProvider (parallel = true)
+    //parallel is the branch name..  if you remove keyword below paralle, it will not run parallel, or if you put false it will not even run parallel
+    @DataProvider (parallel = true)   // you tell parallel it means it runs tests parallel, to execute all test at the same time
     public Object[][] smokeTestData() {
         return new Object[][]{
                 {"View all orders", "List of All Orders"},
